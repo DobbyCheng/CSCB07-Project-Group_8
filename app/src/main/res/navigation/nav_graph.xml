@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.adminhomepage.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_viewEventFragment"
+            app:destination="@id/viewEventFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_viewFeedbackFragment"
+            app:destination="@id/viewFeedbackFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_viewRatingFragment"
+            app:destination="@id/viewRatingFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_scheduleEventFragment"
+            app:destination="@id/scheduleEventFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_postAnnouncementFragment"
+            app:destination="@id/postAnnouncementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.adminhomepage.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewEventFragment"
+        android:name="com.example.adminhomepage.ViewEventFragment"
+        android:label="fragment_view_event"
+        tools:layout="@layout/fragment_view_event" >
+        <action
+            android:id="@+id/action_viewEventFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewFeedbackFragment"
+        android:name="com.example.adminhomepage.ViewFeedbackFragment"
+        android:label="fragment_view_feedback"
+        tools:layout="@layout/fragment_view_feedback" >
+        <action
+            android:id="@+id/action_viewFeedbackFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewRatingFragment"
+        android:name="com.example.adminhomepage.ViewRatingFragment"
+        android:label="fragment_view_rating"
+        tools:layout="@layout/fragment_view_rating" >
+        <action
+            android:id="@+id/action_viewRatingFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/scheduleEventFragment"
+        android:name="com.example.adminhomepage.ScheduleEventFragment"
+        android:label="fragment_schedule_event"
+        tools:layout="@layout/fragment_schedule_event" >
+        <action
+            android:id="@+id/action_scheduleEventFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/postAnnouncementFragment"
+        android:name="com.example.adminhomepage.PostAnnouncementFragment"
+        android:label="fragment_post_announcement"
+        tools:layout="@layout/fragment_post_announcement" >
+        <action
+            android:id="@+id/action_postAnnouncementFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>
