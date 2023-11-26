@@ -13,34 +13,46 @@
         android:theme="@style/Theme.Reggandsigg"
         tools:targetApi="31">
         <activity
-            android:name=".postannouncement"
+            android:name=".adminop.viewcomplaint"
             android:exported="false" />
         <activity
-            android:name=".rsvp"
+            android:name=".stuentop.check.OtherCheck"
             android:exported="false" />
         <activity
-            android:name=".comment"
+            android:name=".stuentop.check.MathadnStaCheck"
             android:exported="false" />
         <activity
-            android:name=".checkpost"
+            android:name=".stuentop.check.cscheck"
             android:exported="false" />
         <activity
-            android:name=".complaint"
+            android:name=".adminop.postannouncement"
             android:exported="false" />
         <activity
-            android:name=".adminpage"
+            android:name=".stuentop.rsvp"
             android:exported="false" />
         <activity
-            android:name=".adminlogin"
+            android:name=".stuentop.comment"
             android:exported="false" />
         <activity
-            android:name=".register"
+            android:name=".stuentop.check.checkpost"
             android:exported="false" />
         <activity
-            android:name=".studeny"
+            android:name=".stuentop.complaint"
             android:exported="false" />
         <activity
-            android:name=".login"
+            android:name=".adminop.adminpage"
+            android:exported="false" />
+        <activity
+            android:name=".loginandregister.adminlogin"
+            android:exported="false" />
+        <activity
+            android:name=".loginandregister.register"
+            android:exported="false" />
+        <activity
+            android:name=".stuentop.studeny"
+            android:exported="false" />
+        <activity
+            android:name=".loginandregister.login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
