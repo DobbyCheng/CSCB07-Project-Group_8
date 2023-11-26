@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -63,7 +64,9 @@ public class login extends AppCompatActivity {
                                     //Open main activity on success
 
                                     try {
-                                        FileWriter writer = new FileWriter("currentuser.txt");
+                                        File file = new File(getFilesDir(), "currentuser.txt");
+                                        FileWriter writer = new FileWriter(file);
+
                                         writer.write(usernameTxt); // 将cur变量的内容写入文件
                                         writer.close();
                                     } catch (IOException e) {
