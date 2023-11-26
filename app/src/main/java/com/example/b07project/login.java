@@ -16,6 +16,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class login extends AppCompatActivity {
 
     FirebaseDatabase db;
@@ -58,7 +61,15 @@ public class login extends AppCompatActivity {
                                 if (getPassword.equals(passwordTxt)) {
                                     Toast.makeText(login.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
                                     //Open main activity on success
-                                    ref.child("currentuser").setValue(usernameTxt);
+
+                                    try {
+                                        FileWriter writer = new FileWriter("currentuser.txt");
+                                        writer.write(usernameTxt); // 将cur变量的内容写入文件
+                                        writer.close();
+                                    } catch (IOException e) {
+                                        throw new RuntimeException(e);
+                                    }
+
                                     startActivity(new Intent(login.this, studeny.class));
                                     finish();
                                 } else {
