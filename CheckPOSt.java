@@ -16,12 +16,8 @@ public class CheckPOSt {
 		return true;
 	}
 	
-	public void getCompleteCourses(boolean f) {
-		completeCourses = f;
-	}
-	
 	public String checkMinor() {
-		if(completeCourses) return "Qualified for POSt!";
+		if(credit >= 4.0) return "Qualified for POSt!";
 		else return "Not qualified for POSt";
 	}
 	
@@ -94,7 +90,6 @@ public class CheckPOSt {
 				convertGrade(grade08) + convertGrade(grade22) +
 				convertGrade(grade37) + convertGrade(grade48);
 		double pointAverage = (double)sum / 6.0;
-		System.out.println(pointAverage);
 		if(pointAverage < 2.5) {
 			return false;
 		}
