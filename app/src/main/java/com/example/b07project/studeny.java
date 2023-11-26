@@ -27,23 +27,23 @@ public class studeny extends AppCompatActivity {
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("currentuser");
 
 
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                String cur = dataSnapshot.getValue(String.class);
-
-                if (cur != null && !cur.isEmpty()) {
-                    currrrent.setText("Welcome " + cur);
-                } else {
-                    currrrent.setText("Welcome Guest " + (cur != null ? cur : "jhon doe"));
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                // 处理错误情况
-            }
-        });
+//        ref.addListenerForSingleValueEvent(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//                String cur = dataSnapshot.getValue(String.class);
+//
+//                if (cur != null && !cur.isEmpty()) {
+//                    currrrent.setText("Welcome " + cur);
+//                } else {
+//                    currrrent.setText("Welcome Guest " + (cur != null ? cur : "jhon doe"));
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                // 处理错误情况
+//            }
+//        });
 
 
 
