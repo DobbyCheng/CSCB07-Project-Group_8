@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="com.example.studenthomepahe.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment"/>
+        <action
+            android:id="@+id/action_FirstFragment_to_submitCommentFragment"
+            app:destination="@id/submitCommentFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_submitComplaintFragment2"
+            app:destination="@id/submitComplaintFragment2" />
+        <action
+            android:id="@+id/action_FirstFragment_to_checkPostFragment"
+            app:destination="@id/checkPostFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_submitRatingFragment"
+            app:destination="@id/submitRatingFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_RSVPFragment"
+            app:destination="@id/RSVPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.example.studenthomepahe.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/submitCommentFragment"
+        android:name="com.example.studenthomepahe.SubmitCommentFragment"
+        android:label="SubmitCommentFragment" >
+        <action
+            android:id="@+id/action_submitCommentFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/submitComplaintFragment2"
+        android:name="com.example.studenthomepahe.SubmitComplaintFragment"
+        android:label="fragment_submit_complaint"
+        tools:layout="@layout/fragment_submit_complaint" >
+        <action
+            android:id="@+id/action_submitComplaintFragment2_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkPostFragment"
+        android:name="com.example.studenthomepahe.CheckPostFragment"
+        android:label="fragment_check_post"
+        tools:layout="@layout/fragment_check_post" >
+        <action
+            android:id="@+id/action_checkPostFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/submitRatingFragment"
+        android:name="com.example.studenthomepahe.SubmitRatingFragment"
+        android:label="fragment_submit_rating"
+        tools:layout="@layout/fragment_submit_rating" >
+        <action
+            android:id="@+id/action_submitRatingFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/RSVPFragment"
+        android:name="com.example.studenthomepahe.RSVPFragment"
+        android:label="fragment_r_s_v_p"
+        tools:layout="@layout/fragment_r_s_v_p" >
+        <action
+            android:id="@+id/action_RSVPFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+</navigation>
