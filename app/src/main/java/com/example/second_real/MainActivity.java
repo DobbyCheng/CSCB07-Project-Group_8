@@ -1,21 +1,28 @@
 package com.example.second_real;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
     private EditText editTextName, editTextParticipantLimit, editTextDate, editTextTime, editTextDescription;
     private Button scheduleEventButton;
-
+    FirebaseDatabase reference;
+    private DatabaseReference myRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,15 +49,9 @@ public class MainActivity extends AppCompatActivity {
                     String date = editTextDate.getText().toString();
                     String time = editTextTime.getText().toString();
                     String description = editTextDescription.getText().toString();
-                    //Testing uploading to firebase
-                    FirebaseDatabase date_to_fire = FirebaseDatabase.getInstance();
-                    DatabaseReference myRef = date_to_fire.getReference("date");
-                    myRef.setValue(date);
 
-                    FirebaseDatabase name_to_fire = FirebaseDatabase.getInstance();
-                    DatabaseReference myRef2 = name_to_fire.getReference("name");
-                    myRef2.setValue(name);
-                   //displayUserData(name, participantLimit, date, time, description);
+                    myRef.child("date").setValue(date);
+                    myRef.child("name").setValue(name);
                 } else {
                     Toast.makeText(MainActivity.this, "Invalid input. Please try again.", Toast.LENGTH_SHORT).show();
                 }

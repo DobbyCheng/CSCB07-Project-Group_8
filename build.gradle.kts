@@ -8,6 +8,3 @@ plugins {
     id("com.android.application") version "8.1.2" apply false
 }
 
-fun buildscript(function: () -> Unit) {
-
-}
