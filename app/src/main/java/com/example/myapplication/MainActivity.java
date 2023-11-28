@@ -45,8 +45,9 @@ public class MainActivity extends AppCompatActivity {
 
                 // Validate if the fields are not empty
                 if (!firstName.isEmpty() && !lastName.isEmpty()) {
-                    student_rsvp.child("First Name").setValue(firstName);
-                    student_rsvp.child("Last Name").setValue(lastName);
+                    DatabaseReference students_in_event = student_rsvp.child("Students Attending");
+                    students_in_event.child("First Name").setValue(firstName);
+                    students_in_event.child("Last Name").setValue(lastName);
 
                 } else {
                     // Show a toast message for invalid input
