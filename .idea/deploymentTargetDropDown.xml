@@ -7,11 +7,11 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\hamed\.android\avd\Pixel_6_API_TiramisuPrivacySandbox.avd" />
+            <value value="C:\Users\hamed\.android\avd\Pixel_6_API_34.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2023-11-27T19:08:14.261479100Z" />
+    <timeTargetWasSelectedWithDropDown value="2023-11-27T21:01:37.380641900Z" />
   </component>
 </project>
