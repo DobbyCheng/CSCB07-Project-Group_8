@@ -28,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        DatabaseReference event = FirebaseDatabase.getInstance().getReference().child("events");
+
         editTextName = findViewById(R.id.editTextExample);
         editTextParticipantLimit = findViewById(R.id.editTextExample2);
         editTextDate = findViewById(R.id.editTextExample3);
@@ -50,8 +52,12 @@ public class MainActivity extends AppCompatActivity {
                     String time = editTextTime.getText().toString();
                     String description = editTextDescription.getText().toString();
 
-                    myRef.child("date").setValue(date);
-                    myRef.child("name").setValue(name);
+                    event.child("date").setValue(date);
+                    event.child("name").setValue(name);
+                    event.child("Time").setValue(date);
+                    event.child("Description").setValue(name);
+                    event.child("Participation Limit").setValue(date);
+
                 } else {
                     Toast.makeText(MainActivity.this, "Invalid input. Please try again.", Toast.LENGTH_SHORT).show();
                 }
