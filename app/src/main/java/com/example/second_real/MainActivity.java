@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     String date = editTextDate.getText().toString();
                     String time = editTextTime.getText().toString();
                     String description = editTextDescription.getText().toString();
-                    //writing to firebase
+                    //writing to firebase database
                     event.child("date").setValue(date);
                     event.child("name").setValue(name);
                     event.child("Time").setValue(date);
