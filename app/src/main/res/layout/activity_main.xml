@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,8 +15,7 @@
         android:background="?attr/colorPrimary"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Event Details"
-        app:titleTextColor="@android:color/white"
-        tools:layout_editor_absoluteX="0dp" />
+        app:titleTextColor="@android:color/white" />
 
     <!-- ScrollView for Event Details -->
     <ScrollView
@@ -25,32 +25,44 @@
         app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:layout_constraintBottom_toTopOf="@id/btnRSVP">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- Event Details -->
+            <!-- First Name EditText -->
 
-            <TextView
+            <!-- Last Name EditText -->
+
+            <EditText
+                android:id="@+id/editTextFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Event Name"
+                android:hint="First Name"
+                android:inputType="text"
                 android:textSize="24sp"
-                android:textStyle="bold" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.072" />
 
-            <TextView
+            <EditText
+                android:id="@+id/editTextLastName"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="8dp"
-                android:text="Event Date: XX/XX/XXXX"
-                android:textSize="18sp" />
+                android:layout_height="wrap_content"
+                android:hint="Last Name"
+                android:inputType="text"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextFirstName"
+                app:layout_constraintVertical_bias="0.051" />
 
-            <!-- Other event details can be added similarly -->
+            <!-- Other EditTexts can be added similarly -->
 
-        </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
     <!-- RSVP Button -->
