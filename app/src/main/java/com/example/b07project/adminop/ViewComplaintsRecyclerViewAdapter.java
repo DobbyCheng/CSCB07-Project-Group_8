@@ -16,8 +16,8 @@ import java.util.ArrayList;
 public class ViewComplaintsRecyclerViewAdapter extends RecyclerView.Adapter<ViewComplaintsRecyclerViewAdapter.MyViewHolder>{
 
     Context context;
-    ArrayList<ViewComplaintsModel> usersList;
-    public ViewComplaintsRecyclerViewAdapter(Context context, ArrayList<ViewComplaintsModel> usersList) {
+    ArrayList<ViewComplaintModel> usersList;
+    public ViewComplaintsRecyclerViewAdapter(Context context, ArrayList<ViewComplaintModel> usersList) {
         this.context = context;
         this.usersList = usersList;
     }
@@ -31,7 +31,11 @@ public class ViewComplaintsRecyclerViewAdapter extends RecyclerView.Adapter<View
 
     @Override
     public void onBindViewHolder(@NonNull ViewComplaintsRecyclerViewAdapter.MyViewHolder holder, int position) {
-        holder.textView.setText(usersList.get(position).getUser());
+        holder.topic.setText(usersList.get(position).getTopic());
+//        holder.textView.setText(usersList.get(position).getContent());
+//        holder.textView.setText(usersList.get(position).getStudentName());
+//        holder.textView.setText(usersList.get(position).getDate());
+        holder.id.setText(usersList.get(position).getComplaintId());
     }
 
     @Override
@@ -40,12 +44,17 @@ public class ViewComplaintsRecyclerViewAdapter extends RecyclerView.Adapter<View
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView textView;
+        TextView topic;
+//        TextView content;
+//        TextView name;
+//        TextView date;
+        TextView id;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
 
-            textView = itemView.findViewById(R.id.complaint_id);
+            topic = itemView.findViewById(R.id.complaint_id);
+            id = itemView.findViewById(R.id.complaint_topic);
         }
     }
 }

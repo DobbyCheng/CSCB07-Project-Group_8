@@ -42,4 +42,9 @@ public class adminpage extends AppCompatActivity {
         Intent x=new Intent(getApplicationContext(), comment.class);
         startActivity(x);
     }
+
+    public  void  gotoviewannouncement(View v){
+        Intent x=new Intent(getApplicationContext(), viewannouncement.class);
+        startActivity(x);
+    }
 }

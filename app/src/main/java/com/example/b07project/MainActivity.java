@@ -2,7 +2,7 @@ package com.example.b07project;
 
 import android.os.Bundle;
 
-import com.example.b07project.adminop.ViewComplaintsModel;
+import com.example.b07project.adminop.ViewComplaintModel;
 import com.example.b07project.adminop.ViewComplaintsRecyclerViewAdapter;
 import com.google.android.material.snackbar.Snackbar;
 
