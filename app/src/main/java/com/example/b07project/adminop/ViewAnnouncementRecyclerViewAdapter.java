@@ -31,11 +31,9 @@ public class ViewAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<Vi
 
     @Override
     public void onBindViewHolder(@NonNull ViewAnnouncementRecyclerViewAdapter.MyViewHolder holder, int position) {
-        holder.textView.setText(usersList.get(position).getAdmin());
-        holder.textView.setText(usersList.get(position).getTitle());
-        holder.textView.setText(usersList.get(position).getContent());
-        holder.textView.setText(usersList.get(position).getId());
-        holder.textView.setText(usersList.get(position).getDate());
+        holder.title.setText(usersList.get(position).getTitle());
+        holder.id.setText(usersList.get(position).getId());
+        holder.date.setText(usersList.get(position).getDate());
     }
 
     @Override
@@ -44,12 +42,16 @@ public class ViewAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<Vi
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView textView;
+        TextView title;
+        TextView date;
+        TextView id;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
 
-            textView = itemView.findViewById(R.id.announcement_id);
+            id = itemView.findViewById(R.id.announcement_id);
+            title = itemView.findViewById(R.id.announcement_title);
+            date = itemView.findViewById(R.id.announcement_date);
         }
     }
 }

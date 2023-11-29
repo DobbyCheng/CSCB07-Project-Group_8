@@ -31,7 +31,7 @@ public class viewcomplaint extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewcomplaint);
 
-        recyclerView = findViewById(R.id.recycler);
+        recyclerView = findViewById(R.id.recycler_comp);
         db = FirebaseDatabase.getInstance("https://b07project-940f2-default-rtdb.firebaseio.com/");
         DatabaseReference ref = db.getReference();
 

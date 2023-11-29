@@ -53,8 +53,8 @@ public class ViewComplaintsRecyclerViewAdapter extends RecyclerView.Adapter<View
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
 
-            topic = itemView.findViewById(R.id.complaint_id);
-            id = itemView.findViewById(R.id.complaint_topic);
+            id = itemView.findViewById(R.id.complaint_id);
+            topic = itemView.findViewById(R.id.complaint_topic);
         }
     }
 }

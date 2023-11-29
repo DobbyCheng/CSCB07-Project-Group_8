@@ -29,16 +29,15 @@ public class viewannouncement extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewannouncement);
 
-        recyclerView = findViewById(R.id.recycler);
+        recyclerView = findViewById(R.id.recycler_ann);
         db = FirebaseDatabase.getInstance("https://b07project-940f2-default-rtdb.firebaseio.com/");
         DatabaseReference ref = db.getReference();
 
         ArrayList<ViewAnnouncementModel> usersList = new ArrayList<>();
         annAdapter = new ViewAnnouncementRecyclerViewAdapter(viewannouncement.this, usersList);
-
         recyclerView.setAdapter(annAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(viewannouncement.this));
-        //usersList.add(new ViewAnnouncementModel("hahaha1"));
+        //usersList.add(new ViewAnnouncementModel("s1", "s2","s3","s4","s5"));
 
         ref.child("announcement").addValueEventListener(new ValueEventListener(){
             @Override
