@@ -17,7 +17,7 @@ public class ViewComplaintModel {
 
     // Getter methods
     public String getTopic() {
-        return topic;
+        return "topic: "+topic;
     }
 
     public String getContent() {
@@ -33,7 +33,7 @@ public class ViewComplaintModel {
     }
 
     public String getComplaintId() {
-        return complaintId;
+        return "#"+complaintId;
     }
 
     // Setter methods (if needed)

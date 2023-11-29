@@ -32,7 +32,7 @@ public class ViewComplaintsRecyclerViewAdapter extends RecyclerView.Adapter<View
     @Override
     public void onBindViewHolder(@NonNull ViewComplaintsRecyclerViewAdapter.MyViewHolder holder, int position) {
         holder.topic.setText(usersList.get(position).getTopic());
-//        holder.textView.setText(usersList.get(position).getContent());
+        holder.content.setText(usersList.get(position).getContent());
 //        holder.textView.setText(usersList.get(position).getStudentName());
 //        holder.textView.setText(usersList.get(position).getDate());
         holder.id.setText(usersList.get(position).getComplaintId());
@@ -45,7 +45,7 @@ public class ViewComplaintsRecyclerViewAdapter extends RecyclerView.Adapter<View
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView topic;
-//        TextView content;
+        TextView content;
 //        TextView name;
 //        TextView date;
         TextView id;
@@ -55,6 +55,7 @@ public class ViewComplaintsRecyclerViewAdapter extends RecyclerView.Adapter<View
 
             id = itemView.findViewById(R.id.complaint_id);
             topic = itemView.findViewById(R.id.complaint_topic);
+            content = itemView.findViewById(R.id.complaint_content);
         }
     }
 }

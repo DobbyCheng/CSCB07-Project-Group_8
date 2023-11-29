@@ -1,50 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:background="@drawable/viewcomplaint_item_background"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
     
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Complaint"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complaint"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"/>
 
-    <TextView
-        android:id="@+id/complaint_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="id"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/complaint_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"/>
 
-    <TextView
-        android:id="@+id/complaint_topic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="topic"
-        android:textColor="@color/white"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/complaint_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="topic"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="20sp"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/complaint_button"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="10dp"
-        android:text="view" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/complaint_content"
+            android:layout_width="290dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="10dp"
+            android:ellipsize="end"
+            android:lines="4"
+            android:maxLines="4"
+            android:singleLine="false"
+            android:text="wobushishabi wobushishabi wobushishabi wobushishabi"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <!--    <Button-->
+<!--        android:id="@+id/complaint_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginBottom="10dp"-->
+<!--        android:text="view" />-->
 
 </LinearLayout>
