@@ -34,6 +34,8 @@ public class ViewAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<Vi
         holder.title.setText(usersList.get(position).getTitle());
         holder.id.setText(usersList.get(position).getId());
         holder.date.setText(usersList.get(position).getDate());
+        holder.content.setText(usersList.get(position).getContent());
+        holder.admin.setText(usersList.get(position).getAdmin());
     }
 
     @Override
@@ -45,6 +47,8 @@ public class ViewAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<Vi
         TextView title;
         TextView date;
         TextView id;
+        TextView content;
+        TextView admin;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
@@ -52,6 +56,8 @@ public class ViewAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<Vi
             id = itemView.findViewById(R.id.announcement_id);
             title = itemView.findViewById(R.id.announcement_title);
             date = itemView.findViewById(R.id.announcement_date);
+            content = itemView.findViewById(R.id.announcement_content);
+            admin = itemView.findViewById(R.id.announcement_admin);
         }
     }
 }

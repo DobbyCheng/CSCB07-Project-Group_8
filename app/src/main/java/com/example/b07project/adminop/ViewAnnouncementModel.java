@@ -17,7 +17,7 @@ public class ViewAnnouncementModel {
     }
 
     public String getAdmin() {
-        return admin;
+        return "posted by "+admin;
     }
 
     public void setAdmin(String admin) {
@@ -25,7 +25,7 @@ public class ViewAnnouncementModel {
     }
 
     public String getTitle() {
-        return title;
+        return "title: "+title;
     }
 
     public void setTitle(String title) {
@@ -41,7 +41,7 @@ public class ViewAnnouncementModel {
     }
 
     public String getId() {
-        return id;
+        return "#"+id;
     }
 
     public void setId(String id) {
