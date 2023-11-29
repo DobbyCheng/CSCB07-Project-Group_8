@@ -1,6 +1,3 @@
 <resources>
-    <string name="app_name">admin-view comment and rating for event page</string>
-    <string name="event_name">EventName</string>
-    <string name="student_name">Student Name</string>
-    <string name="comment_text">Comment Text</string>
+    <string name="app_name">comment_and_rating</string>
 </resources>

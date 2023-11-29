@@ -13,6 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "admin-view comment and rating for event page"
+rootProject.name = "comment_and_rating"
 include(":app")
- 
