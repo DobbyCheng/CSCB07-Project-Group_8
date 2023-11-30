@@ -11,10 +11,14 @@ import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.List;
+
 public class EventSchedule extends AppCompatActivity {
 
     private EditText editTextName, editTextParticipantLimit, editTextDate, editTextTime, editTextDescription;
     private Button scheduleEventButton;
+
+    private List<String> stringList;
     FirebaseDatabase reference;
     private DatabaseReference myRef;
     @Override
@@ -46,8 +50,9 @@ public class EventSchedule extends AppCompatActivity {
                     String time = editTextTime.getText().toString();
                     String description = editTextDescription.getText().toString();
                     //writing to firebase database
+                    stringList = null;
                     EventWriter eventWriter = new EventWriter();
-                    eventWriter.scheduleEvent(name, description, participantLimit, date, time);
+                    eventWriter.scheduleEvent(name, description, participantLimit, date, time, stringList);
 
                 } else {
                     Toast.makeText(EventSchedule.this, "Invalid input. Please try again.", Toast.LENGTH_SHORT).show();

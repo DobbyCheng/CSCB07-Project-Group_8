@@ -1,5 +1,6 @@
 package com.example.second_real;
-
+import java.util.List;
+import java.util.ArrayList;
 public class Event {
 
     private int participantLimit;
@@ -8,19 +9,23 @@ public class Event {
     private String date;
     private String time;
 
+    private  List<String> stringList;
+
     private int EventID ;
 
     public Event() {
         // Default constructor required for Firebase
     }
 
-    public Event(int participantLimit, String date, String time, String eventName, String description, int EventID ) {
+    public Event(int participantLimit, String date, String time,
+                 String eventName,String description, int EventID, List<String> stringList) {
         this.participantLimit = participantLimit;
         this.date = date;
         this.time = time;
         this.eventName = eventName;
         this.description = description;
         this.EventID= EventID;
+        this.stringList = null;
     }
 
     // Getters
