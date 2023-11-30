@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-//hey
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,6 +19,7 @@ public class EventSchedule extends AppCompatActivity {
     private Button scheduleEventButton;
     FirebaseDatabase reference;
     private DatabaseReference myRef;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +58,7 @@ public class EventSchedule extends AppCompatActivity {
             }
         });
     }
+
     private boolean validateInput() {
         return !editTextName.getText().toString().trim().isEmpty() &&
                 !editTextParticipantLimit.getText().toString().trim().isEmpty() &&
@@ -64,6 +66,7 @@ public class EventSchedule extends AppCompatActivity {
                 !editTextTime.getText().toString().trim().isEmpty() &&
                 !editTextDescription.getText().toString().trim().isEmpty();
     }
+
     private void displayUserData(String name, int participantLimit, String date, String time, String description) {
         String userData = "Name: " + name +
                 "\nParticipant Limit: " + participantLimit +
