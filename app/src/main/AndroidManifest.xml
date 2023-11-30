@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Reggandsigg"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".student_rsvp_backend"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Reggandsigg">
