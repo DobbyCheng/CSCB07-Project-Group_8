@@ -7,14 +7,10 @@ import android.widget.EditText;
 import android.widget.Toast;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class student_rsvp extends AppCompatActivity {
 
 
     private EditText editTextFirstName;
@@ -51,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
                     // Show a toast message for invalid input
-                    Toast.makeText(MainActivity.this, "Please enter both first and last names.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(com.example.myapplication.student_rsvp.this, "Please enter both first and last names.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
