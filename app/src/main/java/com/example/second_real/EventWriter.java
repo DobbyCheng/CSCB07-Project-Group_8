@@ -11,15 +11,16 @@ import java.util.Map;
 
 public class EventWriter {
     public void scheduleEvent(String eventName, String description, int participantLimit,
-                              String date, String time, List<String> stringList) {
+                              String date, String time) {
         // Generate a new key for the event
         DatabaseReference eventsRef = FirebaseDatabase.getInstance().getReference().child("events");
         DatabaseReference newEventRef = eventsRef.push();
         String eventId = newEventRef.getKey();
+        String studentsAttending = "";
 
         // Create a map to store event details
         Map<String, Object> eventDetails = new HashMap<>();
-        eventDetails.put("Students Attending", stringList);
+        eventDetails.put("Students Attending", studentsAttending);
         eventDetails.put("name", eventName);
         eventDetails.put("description", description);
         eventDetails.put("participantLimit", participantLimit);
