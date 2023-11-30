@@ -8,18 +8,19 @@ public class Event {
     private String date;
     private String time;
 
-    private int UserId;
+    private int EventID ;
 
     public Event() {
         // Default constructor required for Firebase
     }
 
-    public Event(int participantLimit, String date, String time, String eventName, String description) {
+    public Event(int participantLimit, String date, String time, String eventName, String description, int EventID ) {
         this.participantLimit = participantLimit;
         this.date = date;
         this.time = time;
         this.eventName = eventName;
         this.description = description;
+        this.EventID= EventID;
     }
 
     // Getters
@@ -64,11 +65,11 @@ public class Event {
         this.time = time;
     }
 
-    public int getUserID() {
-        return UserId;
+    public int getEventID() {
+        return EventID;
     }
 
-    public void setUserId(int UserId) {
-        this.UserId = UserId;
+    public void setEventID(int EventID) {
+        this.EventID = EventID;
     }
 }

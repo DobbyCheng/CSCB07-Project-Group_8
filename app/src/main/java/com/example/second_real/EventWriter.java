@@ -15,9 +15,11 @@ public class EventWriter {
         DatabaseReference eventsRef = FirebaseDatabase.getInstance().getReference().child("events");
         DatabaseReference newEventRef = eventsRef.push();
         String eventId = newEventRef.getKey();
+        String studentsAttending = "";
 
         // Create a map to store event details
         Map<String, Object> eventDetails = new HashMap<>();
+        eventDetails.put("Students Attending", studentsAttending);
         eventDetails.put("name", eventName);
         eventDetails.put("description", description);
         eventDetails.put("participantLimit", participantLimit);
