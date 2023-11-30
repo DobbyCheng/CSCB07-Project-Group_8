@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">comment_and_rating</string>
+    <string name="app_name">student_notification</string>
+    <string name="notification">Notification</string>
+    <string name="title">title</string>
+    <string name="date">date</string>
+    <string name="sender">sender</string>
+    <string name="content">content</string>
 </resources>

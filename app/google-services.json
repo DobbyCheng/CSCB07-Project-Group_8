@@ -217,6 +217,25 @@
     },
     {
       "client_info": {
+        "mobilesdk_app_id": "1:362311374890:android:3d1305f003348f5ba58b53",
+        "android_client_info": {
+          "package_name": "com.example.student_notification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIuI1egDlmqo1utCouIx8p1UWhcGxRaIA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:362311374890:android:52f5834e3e815878a58b53",
         "android_client_info": {
           "package_name": "com.example.studenthomepahe"

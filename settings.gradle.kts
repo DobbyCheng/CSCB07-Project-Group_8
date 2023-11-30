@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "comment_and_rating"
+rootProject.name = "student_notification"
 include(":app")
+ 
