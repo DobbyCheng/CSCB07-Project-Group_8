@@ -10,22 +10,5 @@ import java.util.Map;
 
 public class studentlist {
 
-    public void scheduleEvent(String firstName, String lastName, String eventId) {
 
-        DatabaseReference eventsRef = FirebaseDatabase.getInstance().getReference().child("events");
-        DatabaseReference newEventRef = eventsRef.push();
-        String eventId = newEventRef.getKey();
-
-        // Create a map to store event details
-        Map<String, Object> eventDetails = new HashMap<>();
-        eventDetails.put("name", eventName);
-        eventDetails.put("description", description);
-        eventDetails.put("participantLimit", participantLimit);
-        eventDetails.put("date", date);
-        eventDetails.put("time", time);
-        // Write the event details to the new event node
-        newEventRef.setValue(eventDetails);
-        // Log the event ID (optional)
-        //Log.d("EVENTID", eventId);
-    }
 }
