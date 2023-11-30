@@ -1,23 +1,17 @@
 package com.example.second_real;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 //hey
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-public class MainActivity extends AppCompatActivity {
+public class EventSchedule extends AppCompatActivity {
 
     private EditText editTextName, editTextParticipantLimit, editTextDate, editTextTime, editTextDescription;
     private Button scheduleEventButton;
@@ -28,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        DatabaseReference event = FirebaseDatabase.getInstance().getReference().child("events");
+        DatabaseReference event = FirebaseDatabase.getInstance().getReference().child("Event_List");
 
         editTextName = findViewById(R.id.editTextExample);
         editTextParticipantLimit = findViewById(R.id.editTextExample2);
@@ -52,14 +46,11 @@ public class MainActivity extends AppCompatActivity {
                     String time = editTextTime.getText().toString();
                     String description = editTextDescription.getText().toString();
                     //writing to firebase database
-                    event.child("date").setValue(date);
-                    event.child("name").setValue(name);
-                    event.child("Time").setValue(date);
-                    event.child("Description").setValue(name);
-                    event.child("Participation Limit").setValue(date);
+                    EventWriter eventWriter = new EventWriter();
+                    eventWriter.scheduleEvent(name, description, participantLimit, date, time);
 
                 } else {
-                    Toast.makeText(MainActivity.this, "Invalid input. Please try again.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EventSchedule.this, "Invalid input. Please try again.", Toast.LENGTH_SHORT).show();
                 }
             }
         });
