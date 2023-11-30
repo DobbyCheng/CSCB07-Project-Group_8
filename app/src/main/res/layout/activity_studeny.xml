@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
-        android:text="wellcome"
+        android:text="welcome"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.455"
@@ -80,6 +80,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/submit_rating"
         app:layout_constraintVertical_bias="0.131" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gotologin"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="30dp"
+        android:text="Log Out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/RSVP" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
