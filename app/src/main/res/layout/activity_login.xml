@@ -13,7 +13,7 @@
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
         android:id="@+id/useless"
-        android:text="login here"
+        android:text="Login here"
         android:textSize="30dp"
         android:textStyle="bold"/>
 
@@ -67,7 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:onClick="gotosignup"
-        android:text="signup" /> >
+        android:textSize="20dp"
+        android:text="SignUp" /> >
 
     <TextView
         android:id="@+id/adminlog"
@@ -75,7 +76,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:onClick="gotoadmin"
-        android:text="i am damin"/> >
+        android:textSize="20dp"
+        android:text="I am admin"/> >
 
 
 </LinearLayout>

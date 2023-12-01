@@ -1,14 +1,15 @@
 package com.example.b07project.adminop;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.b07project.R;
-import com.example.b07project.stuentop.rsvp;
+import com.example.b07project.loginandregister.login;
 import com.example.b07project.stuentop.comment;
+import com.example.b07project.stuentop.rsvp;
 
 public class adminpage extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class adminpage extends AppCompatActivity {
     }
 
     public  void  gotoevent(View v){
-        Intent x=new Intent(getApplicationContext(), rsvp.class);
+        Intent x=new Intent(getApplicationContext(), admin_post_event.class);
         startActivity(x);
     }
 
@@ -40,6 +41,16 @@ public class adminpage extends AppCompatActivity {
 
     public  void gotofeedback(View v){
         Intent x=new Intent(getApplicationContext(), comment.class);
+        startActivity(x);
+    }
+
+    public  void  gotoviewannouncement(View v){
+        Intent x=new Intent(getApplicationContext(), viewannouncement.class);
+        startActivity(x);
+    }
+
+    public void gotologin(View v){
+        Intent x=new Intent(getApplicationContext(), login.class);
         startActivity(x);
     }
 }

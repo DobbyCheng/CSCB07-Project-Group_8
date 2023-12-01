@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.b07project.R;
-import com.example.b07project.stuentop.studeny;
+import com.example.b07project.stuentop.student;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -62,7 +62,7 @@ public class login extends AppCompatActivity {
                                     Toast.makeText(login.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
                                     //Open main activity on success
                                     ref.child("currentuser"+Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID)).setValue(usernameTxt);
-                                    startActivity(new Intent(login.this, studeny.class));
+                                    startActivity(new Intent(login.this, student.class));
                                     finish();
                                 } else {
                                     Toast.makeText(login.this, "Wrong Password", Toast.LENGTH_SHORT).show();

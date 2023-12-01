@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".adminop.viewcomplaint">
+    tools:context=".adminop.viewannouncement">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_comp"
+        android:id="@+id/recycler_ann"
         android:layout_width="399dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -27,7 +27,7 @@
         android:layout_marginBottom="20dp"
         android:onClick="goback"
         android:text="back"
-        app:layout_constraintBottom_toTopOf="@+id/recycler_comp"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_ann"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

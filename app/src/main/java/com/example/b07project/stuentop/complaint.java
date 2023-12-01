@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.b07project.R;
+import com.example.b07project.adminop.Complaint;
 import com.example.b07project.adminop.adminpage;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -73,13 +74,17 @@ public class complaint extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "you should input something", Toast.LENGTH_LONG).show();
         }
         else{
-            ref.child("complaint").child(String.valueOf(iid)).child("title").setValue(tt);
-            ref.child("complaint").child(String.valueOf(iid)).child("content").setValue(ct);
-            ref.child("complaint").child(String.valueOf(iid)).child("id").setValue(String.valueOf(iid));
             if(!isann){
+                ref.child("complaint").child(String.valueOf(iid)).setValue(new Complaint(tt,ct,use,formattedDate,String.valueOf(iid)));
+
                 ref.child("complaint").child(String.valueOf(iid)).child("sender").setValue(use);
             }
-            ref.child("complaint").child(String.valueOf(iid)).child("date").setValue(formattedDate);
+//
+//            ref.child("complaint").child(String.valueOf(iid)).child("title").setValue(tt);
+//            ref.child("complaint").child(String.valueOf(iid)).child("content").setValue(ct);
+//            ref.child("complaint").child(String.valueOf(iid)).child("id").setValue(String.valueOf(iid));
+//            ref.child("complaint").child(String.valueOf(iid)).child("date").setValue(formattedDate);
+            ref.child("complaint").child(String.valueOf(iid)).setValue(new Complaint(tt,ct,"jhon doe",formattedDate,String.valueOf(iid)));
             ref.child("complaintlength").setValue(iid+1);
             Toast.makeText(getApplicationContext(),"posted",Toast.LENGTH_LONG).show();
             Intent x=new Intent(getApplicationContext(), complaint.class);

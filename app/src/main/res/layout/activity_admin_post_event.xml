@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminop.admin_post_event">
+
+    <EditText
+        android:id="@+id/editTextExample"
+        android:layout_width="150dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="64dp"
+        android:height="48dp"
+        android:background="@drawable/edittext_border"
+        android:inputType="text"
+        android:hint="@string/enter_name"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editTextExample3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_page"
+        app:layout_constraintVertical_bias="0.232" />
+
+    <EditText
+        android:id="@+id/editTextExample3"
+        android:layout_width="155dp"
+        android:layout_height="77dp"
+        android:height="48dp"
+        android:background="@drawable/edittext_border"
+        android:hint="@string/enter_date_of_event_eg_day_month_year"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/editTextExample5"
+        app:layout_constraintEnd_toStartOf="@+id/editTextExample4"
+        app:layout_constraintHorizontal_bias="0.28"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_page"
+        app:layout_constraintVertical_bias="0.739" />
+
+    <EditText
+        android:id="@+id/editTextExample4"
+        android:layout_width="154dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="176dp"
+        android:height="48dp"
+        android:background="@drawable/edittext_border"
+        android:hint="@string/enter_time_of_event_eg_1_00"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_page" />
+
+    <EditText
+        android:id="@+id/editTextExample5"
+        android:layout_width="360dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="64dp"
+        android:height="48dp"
+        android:background="@drawable/edittext_border"
+        android:hint="@string/event_description_eg_this_event_is_for_computer_science_students"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextExample4" />
+
+    <TextView
+        android:id="@+id/title_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="@string/create_an_event"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/scheduleEventButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#2196F3"
+        android:fontFamily="serif"
+        android:paddingStart="16dp"
+        android:paddingTop="12dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="12dp"
+        android:text="@string/schedule_event"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:onClick="AdminPostEvent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextExample5"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="event name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextExample"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.032"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_page"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:fontFamily="serif"
+        android:text="@string/date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextExample3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextExample"
+        app:layout_constraintVertical_bias="0.96" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="117dp"
+        android:layout_height="20dp"
+        android:fontFamily="serif"
+        android:text="@string/time_of_event"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextExample4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="@string/description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextExample5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextExample3"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

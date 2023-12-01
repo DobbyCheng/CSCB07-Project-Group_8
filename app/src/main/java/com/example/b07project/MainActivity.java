@@ -2,6 +2,8 @@ package com.example.b07project;
 
 import android.os.Bundle;
 
+import com.example.b07project.adminop.ViewComplaintModel;
+import com.example.b07project.adminop.ViewComplaintsRecyclerViewAdapter;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +14,15 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.b07project.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
     }
 
     @Override

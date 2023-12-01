@@ -17,7 +17,7 @@ public class comment extends AppCompatActivity {
     }
 
     public void goback(View v){
-        Intent x= new Intent(getApplicationContext(), studeny.class);
+        Intent x= new Intent(getApplicationContext(), student.class);
         startActivity(x);
     }
 }
