@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.b07project.R;
-import com.example.b07project.stuentop.studeny;
+import com.example.b07project.stuentop.student;
 
 public class checkpost extends AppCompatActivity {
 
@@ -18,7 +18,7 @@ public class checkpost extends AppCompatActivity {
     }
 
     public  void  cpgp(View view){
-        Intent intent = new Intent(getApplicationContext(), studeny.class);
+        Intent intent = new Intent(getApplicationContext(), student.class);
         startActivity(intent);
     }
     public  void  gtmatcp(View view){

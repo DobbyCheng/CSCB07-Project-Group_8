@@ -17,13 +17,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class studeny extends AppCompatActivity {
+public class student extends AppCompatActivity {
     FirebaseDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_studeny);
+        setContentView(R.layout.activity_student);
         db = FirebaseDatabase.getInstance("https://b07project-940f2-default-rtdb.firebaseio.com/");
         TextView currrrent = findViewById(R.id.welcome);
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("currentuser"+ Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID));
@@ -67,6 +67,11 @@ public class studeny extends AppCompatActivity {
     }
     public  void gotorsvp(View v){
         Intent x=new Intent(getApplicationContext(), rsvp.class);
+        startActivity(x);
+    }
+
+    public void gotoviewannouncement(View v){
+        Intent x=new Intent(getApplicationContext(), viewannouncement.class);
         startActivity(x);
     }
 

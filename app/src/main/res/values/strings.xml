@@ -77,4 +77,11 @@
     <string name="view_students_complaints">View Students\' Complaints</string>
     <string name="submit_a_complaint">Submit a Complaint</string>
     <string name="student_dashboard">Student Dashboard</string>
+
+    <string name="notify_ann_app_name">student_notification</string>
+    <string name="notify_ann_notification">Notification</string>
+    <string name="notify_ann_title">title</string>
+    <string name="notify_ann_date">date</string>
+    <string name="notify_ann_sender">sender</string>
+    <string name="notify_ann_content">content</string>
 </resources>
