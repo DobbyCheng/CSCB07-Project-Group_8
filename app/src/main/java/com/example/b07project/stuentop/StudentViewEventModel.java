@@ -36,8 +36,9 @@ public class StudentViewEventModel {
     }
 
     public String getEventId() {
-        return "#"+eventId;
+        return String.valueOf(eventId);
     }
+
 
     public String getRating() {
         return "rating: "+Double.toString((double)ratingSum / (double)ratingNum);

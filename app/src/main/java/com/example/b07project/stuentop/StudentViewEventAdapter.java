@@ -1,9 +1,11 @@
 package com.example.b07project.stuentop;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -37,6 +39,20 @@ public class StudentViewEventAdapter extends RecyclerView.Adapter<StudentViewEve
         holder.date.setText(usersList.get(position).getDate());
         holder.id.setText(usersList.get(position).getEventId());
         holder.rating.setText(usersList.get(position).getRating());
+        StudentViewEventModel model = usersList.get(position);
+        holder.gotoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 启动DetailActivity
+                Intent intent = new Intent(context, rsvp.class);
+
+                // 可以传递数据到DetailActivity，例如事件的ID
+
+                intent.putExtra("event_id", model.getEventId());
+
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -46,6 +62,7 @@ public class StudentViewEventAdapter extends RecyclerView.Adapter<StudentViewEve
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView name,description,time,date,id,rating;
+        Button gotoButton;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
@@ -53,6 +70,7 @@ public class StudentViewEventAdapter extends RecyclerView.Adapter<StudentViewEve
             name = itemView.findViewById(R.id.event_name);
             //description = itemView.findViewById(R.id.event_description);
             time = itemView.findViewById(R.id.event_time);
+            gotoButton = itemView.findViewById(R.id.event_goto_button);
             date = itemView.findViewById(R.id.event_date);
             id = itemView.findViewById(R.id.event_id);
             rating = itemView.findViewById(R.id.event_rating);

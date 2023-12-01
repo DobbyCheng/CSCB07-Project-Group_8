@@ -21,7 +21,7 @@ public class studeny extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_studeny);
+        setContentView(R.layout.activity_student);
         db = FirebaseDatabase.getInstance("https://b07project-940f2-default-rtdb.firebaseio.com/");
         TextView currrrent = findViewById(R.id.welcome);
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("currentuser");
