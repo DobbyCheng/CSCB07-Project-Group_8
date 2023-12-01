@@ -15,6 +15,18 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_participant_limit">Enter Participant Limit</string>
+    <string name="enter_date_of_event_eg_day_month_year">Enter date of event(eg. day/month/year)</string>
+    <string name="enter_time_of_event_eg_1_00">Enter time of event(eg:1:00)</string>
+    <string name="event_description_eg_this_event_is_for_computer_science_students">Event Description(eg: This event is for computer science students</string>
+    <string name="schedule_event">Schedule Event</string>
+    <string name="name">Name</string>
+    <string name="participant_limit">Participant Limit</string>
+    <string name="date">Date</string>
+    <string name="date_header">Date</string>
+
+    <string name="time_of_event">Time of event</string>
 
     <string name="lorem_ipsum">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
@@ -84,11 +96,4 @@
     <string name="notify_ann_date">date</string>
     <string name="notify_ann_sender">sender</string>
     <string name="notify_ann_content">content</string>
-    <string name="enter_name" />
-    <string name="enter_date_of_event_eg_day_month_year" />
-    <string name="enter_time_of_event_eg_1_00" />
-    <string name="event_description_eg_this_event_is_for_computer_science_students" />
-    <string name="schedule_event" />
-    <string name="date" />
-    <string name="time_of_event" />
 </resources>
