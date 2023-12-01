@@ -32,7 +32,7 @@ public class StudentViewEventAdapter extends RecyclerView.Adapter<StudentViewEve
     @Override
     public void onBindViewHolder(@NonNull StudentViewEventAdapter.MyViewHolder holder, int position) {
         holder.name.setText(usersList.get(position).getName());
-        holder.description.setText(usersList.get(position).getDescription());
+        //holder.description.setText(usersList.get(position).getDescription());
         holder.time.setText(usersList.get(position).getTime());
         holder.date.setText(usersList.get(position).getDate());
         holder.id.setText(usersList.get(position).getEventId());
@@ -51,7 +51,7 @@ public class StudentViewEventAdapter extends RecyclerView.Adapter<StudentViewEve
             super(itemView);
 
             name = itemView.findViewById(R.id.event_name);
-            description = itemView.findViewById(R.id.event_description);
+            //description = itemView.findViewById(R.id.event_description);
             time = itemView.findViewById(R.id.event_time);
             date = itemView.findViewById(R.id.event_date);
             id = itemView.findViewById(R.id.event_id);
