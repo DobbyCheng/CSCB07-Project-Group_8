@@ -1,15 +1,16 @@
 package com.example.b07project.stuentop;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.b07project.R;
+import com.example.b07project.loginandregister.login;
 import com.example.b07project.stuentop.check.checkpost;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -66,12 +67,17 @@ public class student extends AppCompatActivity {
         startActivity(x);
     }
     public  void gotorsvp(View v){
-        Intent x=new Intent(getApplicationContext(), rsvp.class);
+        Intent x=new Intent(getApplicationContext(), StudentViewEvent.class);
         startActivity(x);
     }
 
     public void gotoviewannouncement(View v){
         Intent x=new Intent(getApplicationContext(), viewannouncement.class);
+        startActivity(x);
+    }
+
+    public void gotologin(View v){
+        Intent x=new Intent(getApplicationContext(), login.class);
         startActivity(x);
     }
 

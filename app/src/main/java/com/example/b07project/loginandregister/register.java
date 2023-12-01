@@ -1,20 +1,18 @@
 package com.example.b07project.loginandregister;
 
-import com.example.b07project.R;
-import com.example.b07project.loginandregister.login;
-import com.example.b07project.loginandregister.stu;
-import com.google.firebase.database.FirebaseDatabase;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.b07project.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 public class register extends AppCompatActivity{
     FirebaseDatabase db;
@@ -41,20 +39,23 @@ public class register extends AppCompatActivity{
 
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                if(!snapshot.exists())
-                {
-                    stu ss=new stu(user,pass);
-                    ref.child("students").child(user).setValue(ss);
+                if (PasswordValidator.isValidPassword(pass)) {
+                    if (!snapshot.exists()) {
+                        stu ss = new stu(user, pass);
+                        ref.child("students").child(user).setValue(ss);
 //                    ref.child("students").child(user).child("username").setValue(user);
 //                    ref.child("students").child(user).child("password").setValue(pass);
 
-                    Toast.makeText(getApplicationContext(),"success!",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "success!", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(getApplicationContext(), login.class);
-                    startActivity(intent);
+                        Intent intent = new Intent(getApplicationContext(), login.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "username existed", Toast.LENGTH_LONG).show();
+                    }
                 }
                 else {
-                    Toast.makeText(getApplicationContext(), "username existed", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"password must be in length of 6 to 16, have at least one letter and number",Toast.LENGTH_LONG).show();
                 }
             }
 

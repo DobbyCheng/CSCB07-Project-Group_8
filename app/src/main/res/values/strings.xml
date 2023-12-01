@@ -84,4 +84,11 @@
     <string name="notify_ann_date">date</string>
     <string name="notify_ann_sender">sender</string>
     <string name="notify_ann_content">content</string>
+    <string name="enter_name" />
+    <string name="enter_date_of_event_eg_day_month_year" />
+    <string name="enter_time_of_event_eg_1_00" />
+    <string name="event_description_eg_this_event_is_for_computer_science_students" />
+    <string name="schedule_event" />
+    <string name="date" />
+    <string name="time_of_event" />
 </resources>
