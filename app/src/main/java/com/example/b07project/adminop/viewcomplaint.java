@@ -1,14 +1,16 @@
 package com.example.b07project.adminop;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
-import com.example.b07project.MainActivity;
 import com.example.b07project.R;
+import com.example.b07project.stuentop.student;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -69,4 +71,10 @@ public class viewcomplaint extends AppCompatActivity {
 //        recyclerView.setAdapter(recyclerViewAdapter);
 //        recyclerView.setLayoutManager(new LinearLayoutManager(viewcomplaint.this));
     }
+
+    public void goback(View v){
+        Intent x= new Intent(getApplicationContext(), adminpage.class);
+        startActivity(x);
+    }
+
 }

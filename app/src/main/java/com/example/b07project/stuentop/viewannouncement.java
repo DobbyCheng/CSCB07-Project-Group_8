@@ -1,6 +1,8 @@
 package com.example.b07project.stuentop;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -63,5 +65,10 @@ public class viewannouncement extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void goback(View v){
+        Intent x= new Intent(getApplicationContext(), student.class);
+        startActivity(x);
     }
 }

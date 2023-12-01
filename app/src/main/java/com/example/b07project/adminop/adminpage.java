@@ -7,6 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.b07project.R;
+import com.example.b07project.loginandregister.login;
 import com.example.b07project.stuentop.comment;
 import com.example.b07project.stuentop.rsvp;
 
@@ -45,6 +46,11 @@ public class adminpage extends AppCompatActivity {
 
     public  void  gotoviewannouncement(View v){
         Intent x=new Intent(getApplicationContext(), viewannouncement.class);
+        startActivity(x);
+    }
+
+    public void gotologin(View v){
+        Intent x=new Intent(getApplicationContext(), login.class);
         startActivity(x);
     }
 }
