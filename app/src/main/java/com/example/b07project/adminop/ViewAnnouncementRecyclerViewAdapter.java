@@ -44,11 +44,11 @@ public class ViewAnnouncementRecyclerViewAdapter extends RecyclerView.Adapter<Vi
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView title;
-        TextView date;
-        TextView id;
-        TextView content;
-        TextView admin;
+        public TextView title;
+        public TextView date;
+        public TextView id;
+        public TextView content;
+        public TextView admin;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
