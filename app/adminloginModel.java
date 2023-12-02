@@ -1,5 +1,8 @@
 package com.example.b07project.loginandregister;
 
+import android.content.ContentResolver;
+import android.provider.Settings;
+
 import androidx.annotation.NonNull;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,4 +22,11 @@ public class adminloginModel {
         DatabaseReference ref = db.getReference();
         ref.child("admin").addListenerForSingleValueEvent(valueEventListener);
     }
+
+    public void saveinformation(String username, String deviceId){
+        DatabaseReference ref = db.getReference();
+        ref.child("currentuser"+ deviceId).setValue(username);
+    }
+
+
 }

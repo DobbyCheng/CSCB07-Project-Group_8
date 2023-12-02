@@ -39,6 +39,8 @@ public class adminloginPresenter {
 
                                 if(getPassword.equals(password)){
                                     view.SetOutputText("Successfully Logged in");
+                                    String deviceId = view.getId();
+                                    model.saveinformation(username, deviceId);
                                     view.openadminpage();
                                 }
                                 else

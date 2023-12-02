@@ -54,9 +54,8 @@ public class adminlogin extends AppCompatActivity {
         finish();
     }
 
-    public void openregister(){
-        Intent x = new Intent(getApplicationContext(), register.class);
-        startActivity(x);
-        finish();
+
+    public String getId(){
+        return Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
     }
 }
