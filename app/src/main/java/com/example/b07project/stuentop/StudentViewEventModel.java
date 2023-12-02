@@ -41,7 +41,8 @@ public class StudentViewEventModel {
 
 
     public String getRating() {
-        return "rating: "+Double.toString((double)ratingSum / (double)ratingNum);
+        String formattedNumber = String.format("%.2f", (double)ratingSum / (double)ratingNum);
+        return "rating: "+formattedNumber;
     }
 
     // Setter methods (if needed)

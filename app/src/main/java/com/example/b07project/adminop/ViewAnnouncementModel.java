@@ -33,7 +33,7 @@ public class ViewAnnouncementModel {
     }
 
     public String getContent() {
-        return content;
+        return "content: "+content;
     }
 
     public void setContent(String content) {

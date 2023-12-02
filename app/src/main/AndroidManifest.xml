@@ -13,10 +13,16 @@
         android:theme="@style/Theme.Reggandsigg"
         tools:targetApi="31">
         <activity
-            android:name=".stuentop.StudentViewEvent"
+            android:name=".adminop.AdminViewEventDetail"
             android:exported="false" />
         <activity
-            android:name=".adminop.admin_post_event"
+            android:name=".adminop.post_event"
+            android:exported="false" />
+        <activity
+            android:name=".adminop.AdminViewEvent"
+            android:exported="false" />
+        <activity
+            android:name=".stuentop.StudentViewEvent"
             android:exported="false" />
         <activity
             android:name=".stuentop.viewannouncement"

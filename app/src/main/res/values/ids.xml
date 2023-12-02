@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item name="editTextExample" type="id" />
-    <item name="editTextExample3" type="id" />
+    <item name="post_event_name" type="id" />
+    <item name="post_event_date" type="id" />
     <item name="title_page" type="id" />
-    <item name="editTextExample5" type="id" />
-    <item name="editTextExample4" type="id" />
+    <item name="post_event_description" type="id" />
+    <item name="post_event_time" type="id" />
     <item name="scheduleEventButton" type="id" />
+    <item name="post_event_limit" type="id" />
 </resources>

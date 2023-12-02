@@ -227,15 +227,15 @@
         app:layout_constraintStart_toEndOf="@+id/cscheckpost"
         app:layout_constraintTop_toBottomOf="@+id/grade37" />
 
-    <TextView
-        android:id="@+id/csresult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="96dp"
-        android:text="your result"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/csback" />
+<!--    <TextView-->
+<!--        android:id="@+id/csresult"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="36dp"-->
+<!--        android:layout_marginEnd="96dp"-->
+<!--        android:text=""-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/csback" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

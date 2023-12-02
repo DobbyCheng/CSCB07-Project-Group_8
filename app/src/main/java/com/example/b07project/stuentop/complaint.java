@@ -1,8 +1,5 @@
 package com.example.b07project.stuentop;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -11,9 +8,11 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.b07project.R;
 import com.example.b07project.adminop.Complaint;
-import com.example.b07project.adminop.adminpage;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,7 +37,7 @@ public class complaint extends AppCompatActivity {
     // 格式化日期
     String formattedDate = today.format(formatter);
     int iid;
-    CheckBox ann;
+    CheckBox comp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,21 +62,21 @@ public class complaint extends AppCompatActivity {
         });
     }
     public void postcom(View view){
-        title=findViewById(R.id.anntitle);
-        content=findViewById(R.id.anncontent);
+        title=findViewById(R.id.comptitle);
+        content=findViewById(R.id.compcontent);
         String tt=title.getText().toString();
         String ct=content.getText().toString();
         DatabaseReference ref = db.getReference();
-        ann=findViewById(R.id.annou);
-        boolean isann=ann.isChecked();
+        comp=findViewById(R.id.comp);
+        boolean iscomp=comp.isChecked();
         if (tt.isEmpty()||ct.isEmpty()){
             Toast.makeText(getApplicationContext(), "you should input something", Toast.LENGTH_LONG).show();
         }
         else{
-            if(!isann){
+            if(!iscomp){
                 ref.child("complaint").child(String.valueOf(iid)).setValue(new Complaint(tt,ct,use,formattedDate,String.valueOf(iid)));
 
-                ref.child("complaint").child(String.valueOf(iid)).child("sender").setValue(use);
+//                ref.child("complaint").child(String.valueOf(iid)).child("sender").setValue(use);
             }
 //
 //            ref.child("complaint").child(String.valueOf(iid)).child("title").setValue(tt);
@@ -93,8 +92,8 @@ public class complaint extends AppCompatActivity {
     }
 
 
-    public void combck(View view){
-        Intent x=new Intent(getApplicationContext(), adminpage.class);
+    public void goback(View v){
+        Intent x= new Intent(getApplicationContext(), student.class);
         startActivity(x);
     }
 

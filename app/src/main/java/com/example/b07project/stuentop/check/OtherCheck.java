@@ -1,13 +1,13 @@
 package com.example.b07project.stuentop.check;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.b07project.R;
 
@@ -26,7 +26,7 @@ public class OtherCheck extends AppCompatActivity {
     }
 
     public  void  othcp(View view){
-        TextView res=findViewById(R.id.result);
+//        TextView res=findViewById(R.id.result);
         a67=findViewById(R.id.grade67);
         String g67=a67.getText().toString();
         a31=findViewById(R.id.grade31);
@@ -44,21 +44,23 @@ public class OtherCheck extends AppCompatActivity {
         fin =findViewById(R.id.checkfinish);
         boolean isdone= fin.isChecked();
         if (!isdone){
-            res.setText("IMPOSSIBLE TO ENTER ANYTHING");
+            //res.setText("IMPOSSIBLE TO ENTER ANYTHING");
+            Toast.makeText(this, "your result: "+"IMPOSSIBLE TO ENTER ANYTHING", Toast.LENGTH_SHORT).show();
         }
         else {
             checking x=new checking();
             if (x.checkvalid1(done)&&x.checkvalid2(g31,g67,g08,g22,g37,g48,"other")){
-
-                res.setText("your reuslt: "+x.checkSpecialist());
+                //res.setText("your result: "+x.checkSpecialist());
+                Toast.makeText(this, "your result: "+x.checkSpecialist(), Toast.LENGTH_SHORT).show();
             }
             else {
-                res.setText("invalid input");
+                //res.setText("invalid input");
+                Toast.makeText(this, "invalid input", Toast.LENGTH_SHORT).show();
             }
         }
     }
     public  void  othcm(View view){
-        TextView res=findViewById(R.id.othresult);
+//        TextView res=findViewById(R.id.othresult);
         a67=findViewById(R.id.grade67);
         String g67=a67.getText().toString();
         a31=findViewById(R.id.grade31);
@@ -76,22 +78,24 @@ public class OtherCheck extends AppCompatActivity {
         fin =findViewById(R.id.checkfinish);
         boolean isdone= fin.isChecked();
         if (!isdone){
-            res.setText("your reuslt: "+"IMPOSSIBLE TO ENTER ANYTHING");
+            //res.setText("your result: "+"IMPOSSIBLE TO ENTER ANYTHING");
+            Toast.makeText(this, "your result: "+"IMPOSSIBLE TO ENTER ANYTHING", Toast.LENGTH_SHORT).show();
         }
         else {
             checking x=new checking();
             if (x.checkvalid1(done)&&x.checkvalid2(g31,g67,g08,g22,g37,g48,"other")){
-
-                res.setText("your reuslt: "+x.checkMajor());
+                //res.setText("your result: "+x.checkMajor());
+                Toast.makeText(this, "your result: "+x.checkMajor(), Toast.LENGTH_SHORT).show();
             }
             else {
-                res.setText("invalid input");
+                //res.setText("invalid input");
+                Toast.makeText(this, "invalid input", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
     public  void  othcn(View view){
-        TextView res=findViewById(R.id.result);
+//        TextView res=findViewById(R.id.result);
         a67=findViewById(R.id.grade67);
         String g67=a67.getText().toString();
         a31=findViewById(R.id.grade31);
@@ -109,16 +113,18 @@ public class OtherCheck extends AppCompatActivity {
         fin =findViewById(R.id.checkfinish);
         boolean isdone= fin.isChecked();
         if (!isdone){
-            res.setText("your reuslt: "+"IMPOSSIBLE TO ENTER ANYTHING");
+            //res.setText("your result: "+"IMPOSSIBLE TO ENTER ANYTHING");
+            Toast.makeText(this, "your result: "+"IMPOSSIBLE TO ENTER ANYTHING", Toast.LENGTH_SHORT).show();
         }
         else {
             checking x=new checking();
             if (x.checkvalid1(done)&&x.checkvalid2(g31,g67,g08,g22,g37,g48,"other")){
-
-                res.setText("your reuslt: "+x.checkMinor());
+                //res.setText("your result: "+x.checkMinor());
+                Toast.makeText(this, "your result: "+x.checkMinor(), Toast.LENGTH_SHORT).show();
             }
             else {
-                res.setText("invalid input");
+                //res.setText("invalid input");
+                Toast.makeText(this, "invalid input", Toast.LENGTH_SHORT).show();
             }
         }
     }

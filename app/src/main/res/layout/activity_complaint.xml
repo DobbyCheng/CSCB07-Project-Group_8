@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/anntitle"
+        android:id="@+id/comptitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
     <EditText
-        android:id="@+id/anncontent"
+        android:id="@+id/compcontent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
-        android:id="@+id/annsub"
+        android:id="@+id/compsub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -83,30 +83,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/annou" />
+        app:layout_constraintTop_toBottomOf="@id/comp" />
 
     <Button
-        android:id="@+id/annback"
+        android:id="@+id/compback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="283dp"
-        android:layout_marginBottom="291dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="140dp"
+        android:onClick="goback"
         android:text="back"
-        android:onClick="combck"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/annsub" />
+        app:layout_constraintStart_toEndOf="@+id/compsub"
+        app:layout_constraintTop_toBottomOf="@+id/comp" />
 
     <CheckBox
-        android:id="@+id/annou"
+        android:id="@+id/comp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
         android:layout_marginTop="9dp"
         android:text="anonymous"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/anncontent" />
+        app:layout_constraintTop_toBottomOf="@+id/compcontent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

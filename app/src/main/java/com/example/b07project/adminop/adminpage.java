@@ -20,12 +20,12 @@ public class adminpage extends AppCompatActivity {
     }
 
     public  void  gotoevent(View v){
-        Intent x=new Intent(getApplicationContext(), admin_post_event.class);
+        Intent x=new Intent(getApplicationContext(), AdminViewEvent.class);
         startActivity(x);
     }
 
     public  void  gotoschedule(View v){
-        Intent x=new Intent(getApplicationContext(), admin_post_event.class);
+        Intent x=new Intent(getApplicationContext(), post_event.class);
         startActivity(x);
     }
 
