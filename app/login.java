@@ -56,9 +56,18 @@ public class login extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public  void  gotoadminsignup(View view){
+        Intent intent = new Intent(getApplicationContext(), adminregister.class);
+        startActivity(intent);
+    }
+
     public void openstudentpage(){
         startActivity(new Intent(login.this, student.class));
         finish();
+    }
+
+    public String getId(){
+        return Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
     }
 
 }

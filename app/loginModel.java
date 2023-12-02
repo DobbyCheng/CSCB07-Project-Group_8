@@ -15,4 +15,9 @@ public class loginModel {
         DatabaseReference ref = db.getReference();
         ref.child("students").addListenerForSingleValueEvent(valueEventListener);
     }
+
+    public void saveinformation(String username, String deviceId){
+        DatabaseReference ref = db.getReference();
+        ref.child("currentuser"+ deviceId).setValue(username);
+    }
 }
