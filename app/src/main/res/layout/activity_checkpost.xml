@@ -12,11 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="105dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="208dp"
         android:layout_marginEnd="191dp"
-        android:text="cs student"
+        android:backgroundTint="@color/light_blue"
         android:onClick="gtcscp"
+        android:text="cs student"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,11 +27,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="103dp"
-        android:text="math and stats student"
+        android:backgroundTint="@color/light_blue"
         android:onClick="gtmatcp"
+        android:text="math and stats student"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cscp" />
 
@@ -40,6 +44,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="157dp"
+        android:backgroundTint="@color/light_blue"
         android:text="other student"
         android:onClick="gtothcp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,11 +58,27 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="203dp"
-        android:layout_marginBottom="259dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="@color/dark_blue"
         android:text="back"
         android:onClick="cpgp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/othcheck" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="341dp"
+        android:layout_height="145dp"
+        android:layout_marginBottom="71dp"
+        android:text="Please Select Which Category You Belong to:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/dark_blue"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/cscp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
