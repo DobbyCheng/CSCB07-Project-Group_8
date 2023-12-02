@@ -87,6 +87,11 @@ public class login extends AppCompatActivity {
             Intent intent = new Intent(getApplicationContext(), register.class);
             startActivity(intent);
         }
+
+        public  void  gotoadminsignup(View view){
+            Intent intent = new Intent(getApplicationContext(), adminregister.class);
+            startActivity(intent);
+        }
         public void gotoadmin(View view){
             Intent intent = new Intent(getApplicationContext(), adminlogin.class);
             startActivity(intent);

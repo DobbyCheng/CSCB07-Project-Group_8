@@ -19,11 +19,11 @@
 
     <EditText
         android:id="@+id/editTextAdminPassword"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="Password (length 6 to 16, one letter and number)"
+        android:hint="length 6~16, at least a letter and a number"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

@@ -82,7 +82,10 @@ public class adminlogin extends AppCompatActivity {
                 }
             }
         });
+    }
 
-
+    public void goback(View view) {
+        Intent intent = new Intent(getApplicationContext(), login.class);
+        startActivity(intent);
     }
 }
