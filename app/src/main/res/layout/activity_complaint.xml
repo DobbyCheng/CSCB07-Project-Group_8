@@ -10,14 +10,31 @@
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="185dp"
+        android:fontFamily="serif"
         android:text="post complaint"
-        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/dark_blue"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <EditText
+        android:id="@+id/anncontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="input here"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.258" />
 
     <TextView
         android:id="@+id/textView15"
@@ -25,7 +42,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="132dp"
+        android:fontFamily="serif"
         android:text="title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/dark_blue"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -35,41 +55,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="96dp"
         android:ems="10"
         android:hint="input here"
         android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView15"
-        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.192" />
 
     <TextView
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="306dp"
+        android:fontFamily="serif"
         android:text="content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/dark_blue"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
-
-    <EditText
-        android:id="@+id/anncontent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="164dp"
-        android:ems="10"
-        android:hint="input here"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.265" />
 
     <Button
         android:id="@+id/annsub"
@@ -80,6 +90,7 @@
         android:layout_marginEnd="279dp"
         android:onClick="postcom"
         android:text="submit"
+        android:backgroundTint="@color/dark_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -95,6 +106,7 @@
         android:layout_marginBottom="291dp"
         android:text="back"
         android:onClick="combck"
+        android:backgroundTint="@color/dark_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,9 +116,12 @@
         android:id="@+id/annou"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="9dp"
         android:text="anonymous"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/anncontent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.363" />
 </androidx.constraintlayout.widget.ConstraintLayout>
