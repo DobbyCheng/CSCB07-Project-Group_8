@@ -3,12 +3,14 @@ package com.example.b07project.loginandregister;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.b07project.R;
@@ -20,72 +22,40 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class adminlogin extends AppCompatActivity {
-    FirebaseDatabase db;
-    EditText username,password;
-    Button logn;
+
+    EditText username, password;
+    Button log;
+    adminloginPresenter presenter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adminlogin);
-        db = FirebaseDatabase.getInstance("https://b07project-940f2-default-rtdb.firebaseio.com/");
-    }
+        username = (EditText) findViewById(R.id.adminname);
+        password = (EditText) findViewById(R.id.adminpassword);
+        log = findViewById(R.id.adminlogbtn);
+        presenter = new adminloginPresenter(this, new adminloginModel());
 
-    public void admnLogIn(View view) {
-        DatabaseReference ref = db.getReference();
-        username=findViewById(R.id.adminname);
-        password=findViewById(R.id.adminpassword);
-        logn=findViewById(R.id.adminlogbtn);
-        logn.setOnClickListener(new View.OnClickListener(){
-
+        log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String user = username.getText().toString();
-                String pass = password.getText().toString();
-                if(user.isEmpty() || pass.isEmpty()){
-                    Toast.makeText(adminlogin.this,"no empty string", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    ref.child("admin").addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            // check if mobile is exist in database
-                            if(snapshot.hasChild(user)){
-                                //username is exist in database
-                                //now get password of user from database and match it with user entered password
-
-                                final String getPassword = String.valueOf(snapshot.child(user).child("password").getValue());
-
-                                if(getPassword.equals(pass)){
-                                    Toast.makeText(adminlogin.this, "Successfully Logged in", Toast.LENGTH_SHORT).show();
-                                    //Open main activity on success
-                                    ref.child("currentuser"+ Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID)).setValue(user);
-                                    startActivity(new Intent(adminlogin.this, adminpage.class));
-                                    finish();
-                                }
-                                else{
-                                    Toast.makeText(adminlogin.this,"Wrong Password" ,Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                            else{
-                                Toast.makeText(adminlogin.this, "Wrong Password or Username", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
-
-                }
+                presenter.adminlogin(username.getText().toString(), password.getText().toString());
             }
         });
+
+    }
+    public void SetOutputText(String resultText){
+        Toast.makeText(this, resultText, Toast.LENGTH_SHORT).show();
     }
 
-    public void goback(View view) {
-        Intent intent = new Intent(getApplicationContext(), login.class);
-        startActivity(intent);
+    public void openadminpage(){
+        startActivity(new Intent(adminlogin.this, adminpage.class));
+        finish();
+    }
+
+
+    public String getId(){
+        return Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
     }
 }
