@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="-60dp"
-        tools:layout_editor_absoluteY="50dp"> <!-- Set your desired background color -->
+        tools:layout_editor_absoluteY="50dp">
 
         <EditText
             android:id="@+id/editTextEventName"
