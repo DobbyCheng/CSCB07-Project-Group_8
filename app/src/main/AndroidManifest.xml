@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Reggandsigg"
         tools:targetApi="31">
         <activity
+            android:name=".loginandregister.adminregister"
+            android:exported="false" />
+        <activity
             android:name=".adminop.AdminViewEventDetail"
             android:exported="false" />
         <activity

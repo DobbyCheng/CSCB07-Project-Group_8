@@ -11,7 +11,7 @@ public class PasswordValidator {
         String letters = "(.*[a-zA-Z].*)";
         String numbers = "(.*[0-9].*)";
 
-        if (password.length() <= minLength || password.length() >= maxLength) {
+        if (password.length() < minLength || password.length() > maxLength) {
             return false;
         }
 
