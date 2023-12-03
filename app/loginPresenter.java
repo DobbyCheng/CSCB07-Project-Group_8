@@ -11,17 +11,19 @@ public class loginPresenter {
     login view;
 
     public loginPresenter(login view, loginModel model) {
-        this.model = model;
         this.view = view;
+        this.model = model;
     }
 
-    public void studentlogin(String username, String password) {
+    public void studentlogin() {
+        final String username = view.getUsername();
+        final String password = view.getPassword();
         if (username.equals("") || password.equals(""))
         {
             view.SetOutputText("You have not put anything");
         }
         else{
-            model.studentlogin(this, username, password, new ValueEventListener() {
+            model.studentlogin(username, password, new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             if(snapshot.hasChild(username)){

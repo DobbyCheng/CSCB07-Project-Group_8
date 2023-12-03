@@ -11,7 +11,7 @@ public class loginModel {
         db = FirebaseDatabase.getInstance("https://b07project-940f2-default-rtdb.firebaseio.com/");
     }
 
-    public void studentlogin(loginPresenter presenter, String username, String password, ValueEventListener valueEventListener) {
+    public void studentlogin(String username, String password, ValueEventListener valueEventListener) {
         DatabaseReference ref = db.getReference();
         ref.child("students").addListenerForSingleValueEvent(valueEventListener);
     }

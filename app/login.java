@@ -22,13 +22,14 @@ import com.google.firebase.database.ValueEventListener;
 import android.provider.Settings;
 
 public class login extends AppCompatActivity {
-    EditText username,password;
+    public EditText username;
+    public EditText password;
     Button login;
 
     loginPresenter presenter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         username = (EditText) findViewById(R.id.loginusername);
@@ -39,7 +40,7 @@ public class login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                presenter.studentlogin(username.getText().toString(), password.getText().toString());
+                presenter.studentlogin();
             }
         });
     }
@@ -68,6 +69,14 @@ public class login extends AppCompatActivity {
 
     public String getId(){
         return Settings.Secure.getString(getContentResolver(),Settings.Secure.ANDROID_ID);
+    }
+
+    public String getUsername(){
+        return ((EditText) findViewById(R.id.loginusername)).getText().toString();
+    }
+
+    public String getPassword(){
+        return ((EditText) findViewById(R.id.password)).getText().toString();
     }
 
 }
