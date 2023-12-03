@@ -79,4 +79,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adminpassword"
         app:layout_constraintVertical_bias="0.0"></androidx.appcompat.widget.AppCompatButton>
+
+    <Button
+        android:id="@+id/adminloginback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="160dp"
+        android:backgroundTint="@color/dark_blue"
+        android:onClick="goback"
+        android:text="back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminlogbtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>

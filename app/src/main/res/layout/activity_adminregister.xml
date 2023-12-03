@@ -12,29 +12,36 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:text="Admin Register Here"
-        android:textSize="24sp"
+        android:textColor="@color/dark_blue"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/border"
+        />
+
     <EditText
         android:id="@+id/editTextAdminPassword"
-        android:layout_width="350dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:ems="10"
-        android:hint="length 6~16, at least a letter and a number"
+        android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAdminUsername" />
-
     <Button
         android:id="@+id/adminSignUpBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="@color/dark_blue"
         android:onClick="adminSignup"
         android:text="Sign Up"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,12 +52,11 @@
         android:id="@+id/editTextAdminUsername"
         android:layout_width="219dp"
         android:layout_height="48dp"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Admin Username"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adminRegistrationTitle" />
 
@@ -60,8 +66,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:onClick="goToAdminLogin"
-        android:text="Go to Admin Login"
+        android:text="go to admin login"
+        android:backgroundTint="@color/dark_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adminSignUpBtn" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="serif"
+        android:text="Note: Passwords must be of length 6-16"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/adminSignUpBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAdminPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>

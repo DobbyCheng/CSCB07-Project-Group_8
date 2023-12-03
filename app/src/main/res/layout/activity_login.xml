@@ -69,7 +69,17 @@
         android:layout_marginStart="5dp"
         android:onClick="gotosignup"
         android:textSize="20dp"
-        android:text="SignUp" />
+        android:text="Sign Up as a Student" />
+
+    <TextView
+        android:id="@+id/admin_registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:onClick="gotoadminsignup"
+        android:textSize="20dp"
+        android:text="Sign Up as an Admin" />
+
     <TextView
         android:id="@+id/adminlog"
         android:layout_width="wrap_content"
@@ -77,7 +87,7 @@
         android:layout_marginStart="5dp"
         android:onClick="gotoadmin"
         android:textSize="20dp"
-        android:text="I am admin"/> >
+        android:text="Admin Login"/>
 
 
 </LinearLayout>
