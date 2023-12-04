@@ -48,7 +48,7 @@ public class register extends AppCompatActivity{
 
                         Toast.makeText(getApplicationContext(), "success!", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(getApplicationContext(), login.class);
+                        Intent intent = new Intent(getApplicationContext(), loginView.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(getApplicationContext(), "username existed", Toast.LENGTH_LONG).show();
@@ -66,7 +66,7 @@ public class register extends AppCompatActivity{
     }
 
     public void gotologin(View view) {
-        Intent intent = new Intent(getApplicationContext(), login.class);
+        Intent intent = new Intent(getApplicationContext(), loginView.class);
         startActivity(intent);
     }
 }

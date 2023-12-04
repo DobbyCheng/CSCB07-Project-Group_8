@@ -75,6 +75,7 @@
         android:id="@+id/textView18"
         android:layout_width="341dp"
         android:layout_height="145dp"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="71dp"
         android:text="Please Select Which Category You Belong to:"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"

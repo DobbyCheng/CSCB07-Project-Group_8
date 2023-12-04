@@ -64,7 +64,7 @@
             android:name=".adminop.adminpage"
             android:exported="false" />
         <activity
-            android:name=".loginandregister.adminlogin"
+            android:name=".loginandregister.adminloginView"
             android:exported="false" />
         <activity
             android:name=".loginandregister.register"
@@ -73,7 +73,7 @@
             android:name=".stuentop.student"
             android:exported="false" />
         <activity
-            android:name=".loginandregister.login"
+            android:name=".loginandregister.loginView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

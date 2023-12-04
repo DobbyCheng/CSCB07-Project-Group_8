@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.b07project.R;
-import com.example.b07project.loginandregister.login;
+import com.example.b07project.loginandregister.loginView;
 import com.example.b07project.stuentop.comment;
 
 public class adminpage extends AppCompatActivity {
@@ -49,7 +49,7 @@ public class adminpage extends AppCompatActivity {
     }
 
     public void gotologin(View v){
-        Intent x=new Intent(getApplicationContext(), login.class);
+        Intent x=new Intent(getApplicationContext(), loginView.class);
         startActivity(x);
     }
 }

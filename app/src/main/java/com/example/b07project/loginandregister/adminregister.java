@@ -45,7 +45,7 @@ public class adminregister extends AppCompatActivity {
 
                         Toast.makeText(getApplicationContext(), "success!", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(getApplicationContext(), adminlogin.class);
+                        Intent intent = new Intent(getApplicationContext(), adminloginView.class);
                         startActivity(intent);
                     } else {
                         Toast.makeText(getApplicationContext(), "Admin username existed", Toast.LENGTH_LONG).show();
@@ -62,7 +62,7 @@ public class adminregister extends AppCompatActivity {
     }
 
     public void goToAdminLogin(View view) {
-        Intent intent = new Intent(getApplicationContext(), adminlogin.class);
+        Intent intent = new Intent(getApplicationContext(), adminloginView.class);
         startActivity(intent);
     }
 }

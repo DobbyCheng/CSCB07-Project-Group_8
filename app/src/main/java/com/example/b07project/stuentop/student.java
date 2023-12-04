@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.b07project.R;
-import com.example.b07project.loginandregister.login;
+import com.example.b07project.loginandregister.loginView;
 import com.example.b07project.stuentop.check.checkpost;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -77,7 +77,7 @@ public class student extends AppCompatActivity {
     }
 
     public void gotologin(View v){
-        Intent x=new Intent(getApplicationContext(), login.class);
+        Intent x=new Intent(getApplicationContext(), loginView.class);
         startActivity(x);
     }
 
