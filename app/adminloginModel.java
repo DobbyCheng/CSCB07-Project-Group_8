@@ -18,9 +18,20 @@ public class adminloginModel {
         db = FirebaseDatabase.getInstance("https://b07project-940f2-default-rtdb.firebaseio.com/");
     }
 
-    public void adminlogin(adminloginPresenter presenter, String username, String password, ValueEventListener valueEventListener) {
+    public void adminlogin(String username, String password, adminloginPresenter presenter) {
         DatabaseReference ref = db.getReference();
-        ref.child("admin").addListenerForSingleValueEvent(valueEventListener);
+
+        ref.child("admin").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                presenter.userStuff(username, password, snapshot);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     public void saveinformation(String username, String deviceId){
