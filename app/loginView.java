@@ -1,6 +1,5 @@
 package com.example.b07project.loginandregister;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,20 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.b07project.R;
-import com.example.b07project.adminop.adminpage;
 import com.example.b07project.stuentop.student;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
+
 import android.provider.Settings;
 
-public class login extends AppCompatActivity {
+public class loginView extends AppCompatActivity {
     public EditText username;
     public EditText password;
     Button login;
@@ -53,7 +46,7 @@ public class login extends AppCompatActivity {
         startActivity(intent);
     }
     public void gotoadmin(View view){
-        Intent intent = new Intent(getApplicationContext(), adminlogin.class);
+        Intent intent = new Intent(getApplicationContext(), adminloginView.class);
         startActivity(intent);
     }
 
@@ -63,7 +56,7 @@ public class login extends AppCompatActivity {
     }
 
     public void openstudentpage(){
-        startActivity(new Intent(login.this, student.class));
+        startActivity(new Intent(loginView.this, student.class));
         finish();
     }
 
