@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:background="@drawable/viewcomplaint_item_background"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/dark_blue">
 
     <LinearLayout
         android:orientation="horizontal"

@@ -8,68 +8,67 @@
 
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/border"
-        />
+        android:src="@drawable/border" />
 
     <Button
         android:id="@+id/cscp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="208dp"
-        android:layout_marginEnd="191dp"
-        android:backgroundTint="@color/light_blue"
+        android:backgroundTint="@color/proper_blue"
         android:onClick="gtcscp"
         android:text="cs student"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/matcp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902" />
 
     <Button
         android:id="@+id/matcp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="103dp"
-        android:backgroundTint="@color/light_blue"
+        android:layout_marginBottom="408dp"
+        android:backgroundTint="@color/proper_blue"
         android:onClick="gtmatcp"
         android:text="math and stats student"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cscp" />
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/othcheck"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/othcheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="157dp"
-        android:backgroundTint="@color/light_blue"
-        android:text="other student"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="408dp"
+        android:backgroundTint="@color/proper_blue"
         android:onClick="gtothcp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/matcp" />
+        android:text="other student"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/cpback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="203dp"
+        android:layout_marginTop="39dp"
         android:backgroundTint="@color/dark_blue"
         android:onClick="cpgp"
         android:text="back"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.563"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/othcheck" />
+        app:layout_constraintTop_toBottomOf="@+id/othcheck"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView18"
